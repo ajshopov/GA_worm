@@ -1,0 +1,18 @@
+<h1> Login Page </h1>
+
+<form action="/session" method="post">
+   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+ 
+   <label for="">email</label>
+   <input type="text" name="email">
+
+   <label for="">username</label>
+   <input name="username" type="text" placeholder="username">
+ 
+   <label for="">password</label>
+   <input type="text" name="password">
+ 
+   <button>login</button>
+ </form> 
+
+ <a href="/new"><h2>New User?</h2></a>

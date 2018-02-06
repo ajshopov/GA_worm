@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-	get '/', to: 'pages#home'
+	# get '/', to: 'pages#home'
 
 
   resources :votes

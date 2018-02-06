@@ -7,9 +7,13 @@ Rails.application.routes.draw do
   delete '/session', to: 'session#destroy'
 	get '/presentations/:id/vote', to: 'votes#vote' #routes to page to vote for specific presentation
 
+
+
   resources :votes
   resources :presentations
   resources :teachers
+  get '/api/votes', to: 'votes#api_index'
+  
 
 
 	# get '/login', to: 'sessions#login'

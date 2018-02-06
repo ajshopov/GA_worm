@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   	root to: 'pages#home'
 
-  	get '/login', to: 'session#login'
+  	get '/login', to: 'sessions#login'
 
-	post '/session', to: 'session#create'
+	post '/session', to: 'sessions#create'
 
  	get '/new', to: 'teachers#new'
 
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
 	get '/show', to: 'presentations#show'
 
-	get '/voters', to: 'votes#voters'
+	get '/vote', to: 'votes#vote'
 
 
   resources :votes

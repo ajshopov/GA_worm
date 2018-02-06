@@ -1,11 +1,18 @@
 <h1>Home</h1>
 
- <a href="/login"><h2>Login</h2></a>
+<% if !logged_in? %>
+  <a href="/login"><h2>login</h2></a>
+  <a href="/teachers/new"><h2>Signup</h2></a>
+<% end %>
 
- <a href="/new"><h2>Signup</h2></a>
 
  <p>The Worm is a real-time audience sentiment feedback tool for the classroom and other public speaking scenarios.</p>
-
+<p>
+  <a href="/presentations/new">start a new presentation</a>
+</p> 
+<p>
+  <a href="/presentations">View all</a>
+</p>
 <img src="http://via.placeholder.com/400x250">
 
 <br>

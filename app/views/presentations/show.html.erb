@@ -1,6 +1,17 @@
-<h1>Worm Page</h1>
+<h2>Your worm</h2>
+<p>
+  <%= @presentation.description %>
+</p>
+<p>
+  <%= @presentation.metric %>
+</p>
+<p>
+  <%= @presentation.date %>
+  <%= @presentation.start_time %>
+  <%= @presentation.end_time %>
+</p>
 
-<form action="/session" method="post">
+<!-- <form action="/session" method="post">
  
    <label for="">Session Title</label>
    <input type="text" name="sessiontitle" placeholder="code">
@@ -19,7 +30,7 @@
 
    <button>Start</button>
 </form> 
-
+ -->
 <br>
 
 <img src="http://via.placeholder.com/400x250">

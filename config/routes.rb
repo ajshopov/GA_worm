@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
+  get '/login', to: 'session#login'
+  get '/new', to: 'teachers#new'
   resources :votes
   resources :presentations
   resources :teachers

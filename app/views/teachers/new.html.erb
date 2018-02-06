@@ -1,6 +1,7 @@
 <h1> Sign Up </h1>
 
-<form action="/session" method="post">
+<form action="/teachers" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
 		<input name="email" type="text" placeholder="email">
 		<br>
@@ -10,7 +11,7 @@
 		<br>
 		<br>
 	
-		<input name="password_digest" type="password" placeholder="password">
+		<input name="password" type="password" placeholder="password">
 
 		<button>Sign up</button>
 </form>

@@ -1,0 +1,22 @@
+<h2>Start a new worm</h2>
+
+<form action="/presentations" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="">Description</label>
+  <input type="text" name="description">
+
+  <label for="">Metric to track</label>
+  <input type="text" name="metric">
+
+  <label for="">Date for presentation</label>
+  <input type="date" name="date">
+
+  <label for="">start time</label>
+  <input type="time" name="start_time">
+
+  <label for="">end time</label>
+  <input type="time" name="end_time">
+
+  <button>create</button>
+</form>

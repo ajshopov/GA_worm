@@ -1,0 +1,6 @@
+  <% @presos.each do |pres| %>
+    <a href="/presentations/<%= pres.id %>">
+    <h2><%= pres.description %></h2>
+    </a>
+    <p><%= pres.metric %></p>
+  <% end %>

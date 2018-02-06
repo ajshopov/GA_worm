@@ -1,16 +1,20 @@
 class TeachersController < ApplicationController
 
 	def new
-		teachers = Teacher.all
 	end
 
 	def create 
-		teachers = Teacher.new
-		teachers.email = params[:email]
-		teachers.username = params[:username]
-		teachers.password_digest = params[:password_digest]
-		teachers.save
-		redirect_to '/login'
+		teacher = Teacher.new
+		teacher.email = params[:email]
+		teacher.username = params[:username]
+		teacher.password = params[:password]
+		teacher.save
+		session[:teacher_id] = teacher.id
+		redirect_to '/'
+	end
+
+	def show
+		
 	end
 
 end

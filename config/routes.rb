@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
-  root to: 'pages#home' #shows homepage
+	root to: 'pages#home'
 
-  get '/login', to: 'sessions#login' #login page
+	# get '/login', to: 'sessions#login'
+  get '/login', to: 'session#new'
+	post '/session', to: 'session#create'
+  delete '/session', to: 'session#destroy'
 
-	post '/session', to: 'sessions#create' #no page view
 
  	get '/new', to: 'teachers#new' #routes to register page
 

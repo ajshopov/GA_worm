@@ -9,7 +9,16 @@
   </head>
 
   <body>
-
+<%= session[:teacher_id] %>
+      <% if logged_in? %>
+        <!-- log out button -->
+        <form action="/session" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <button>logout</button>
+        </form>
+        <h2>Logged in as: <%= current_user.email %></h2>
+      <% end %>      
 <h1>The Worm!</h1>
 
     <%= yield %>

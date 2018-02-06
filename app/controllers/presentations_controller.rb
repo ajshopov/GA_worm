@@ -25,7 +25,7 @@ class PresentationsController < ApplicationController
 	end
 
   def index
-    @presos = Presentation.all
+    redirect_to '/teachers/show'
   end
-  
+
 end

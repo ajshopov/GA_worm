@@ -1,6 +1,6 @@
 class VotesController < ApplicationController
 
-	def voters
+	def vote
 	end
 
 end

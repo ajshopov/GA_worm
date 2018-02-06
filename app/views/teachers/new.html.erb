@@ -1,7 +1,7 @@
 <h1> Sign Up </h1>
 
-<form action="/session/new" method="post">
-	
+<form action="/session" method="post">
+
 		<input name="email" type="text" placeholder="email">
 		<br>
 		<br>
@@ -10,8 +10,9 @@
 		<br>
 		<br>
 	
-		<input name="password" type="password" placeholder="password">
+		<input name="password_digest" type="password" placeholder="password">
 
 		<button>Sign up</button>
 </form>
 
+<a href="/login"><h2>Already have an account?</h2></a>

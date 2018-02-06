@@ -1,4 +1,4 @@
 class PresentationsController < ApplicationController
-  belongs_to :teacher
+  has_one :teacher
   has_many :votes
 end

@@ -1,13 +1,37 @@
-<h1>Vote page for specific preso</h1>
+<h1>Votes Page</h1>
+
+<h4>Session Title</h4>
+<h4>Session Time</h4>
+<h4>Session Code</h4>
+
+ <img src="http://via.placeholder.com/400x250">
 
 
-<h2><%= @presentation.description %></h2>
+ <h4>SILDER BUTTON</h4>
 
-<p>
-  <%= @presentation.metric %>
-</p>
-<p>
-  <%= @presentation.date %>
-  <%= @presentation.start_time %>
-  <%= @presentation.end_time %>
-</p>
+ <div class="slidecontainer">
+
+</div>
+
+<form action="/votes" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <input type="hidden" name="presentation_id" value="<%= @presentation.id %>">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="vote_value">
+  <p>Value: <span id="demo"></span></p>
+  <button>vote</button>
+</form>
+
+<script>
+
+  var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
+
+</script>
+

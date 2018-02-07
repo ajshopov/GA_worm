@@ -10,8 +10,17 @@
  <h4>SILDER BUTTON</h4>
 
  <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+
 </div>
+
+<form action="/votes" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <input type="hidden" name="presentation_id" value="<%= @presentation.id %>">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="vote_value">
+  <p>Value: <span id="demo"></span></p>
+  <button>vote</button>
+</form>
 
 <script>
 
@@ -26,6 +35,3 @@ slider.oninput = function() {
 
 </script>
 
-<br>
-
-<br>

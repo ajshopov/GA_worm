@@ -1,4 +1,17 @@
+<% if logged_in? %>
+  <!-- log out button -->
+  <form action="/session" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <button>logout</button>
+  </form>
+  <h2>Logged in as: <%= current_user.username %></h2>
+  <p><a href="teachers/<%=current_user.id%>">Go to my dashboard</a></p>
+<% end %>
+
+
 <h1>Votes Page</h1>
+<h2><%= @presentation.description %></h2>
 
 <h4>Session Title</h4>
 <h4>Session Time</h4>
@@ -34,4 +47,3 @@ slider.oninput = function() {
 }
 
 </script>
-

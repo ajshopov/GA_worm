@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180207054832) do
+ActiveRecord::Schema.define(version: 20180207223021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20180207054832) do
     t.uuid "teacher_id"
     t.datetime "start_time"
     t.datetime "end_time"
+    t.text "region"
   end
 
   create_table "teachers", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -38,7 +39,7 @@ ActiveRecord::Schema.define(version: 20180207054832) do
   create_table "votes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.datetime "vote_moment"
     t.integer "vote_value"
-    t.inet "ip_address"
+    t.text "ip_region"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.uuid "presentation_id"

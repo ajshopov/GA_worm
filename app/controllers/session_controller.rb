@@ -9,7 +9,7 @@ class SessionController < ApplicationController
       session[:teacher_id] = teacher.id # just a hash
       redirect_to '/'
     else
-      render :new
+      redirect_to '/login', notice: "This email / password combination is invalid. Please try again."
     end
   end
 

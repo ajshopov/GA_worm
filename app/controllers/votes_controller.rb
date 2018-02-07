@@ -5,7 +5,7 @@ class VotesController < ApplicationController
 	end
 
 	def api_index
-		@votes = Vote.where(presentation_id: params[:id])
+		@votes = Vote.where({presentation_id: params[:id], created_at: (Time.now - 10.seconds)..Time.now}) 
 		render json: @votes
 	end
 

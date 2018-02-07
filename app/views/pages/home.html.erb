@@ -1,7 +1,6 @@
-<h1>Home</h1>
-
+<div class="loginSignupButtons">
 <% if !logged_in? %>
-  <a href="/login"><h2>login</h2></a>
+  <a href="/login"><h2>Login</h2></a>
   <a href="/teachers/new"><h2>Signup</h2></a>
 <% end %>
 
@@ -16,16 +15,24 @@
   <p><a href="teachers/<%=current_user.id%>">Go to my dashboard</a></p>
 <% end %>
 
+<br>
+<br>
 
+<div class="information">
  <p>The Worm is a real-time audience sentiment feedback tool for the classroom and other public speaking scenarios.</p>
+</div>
 
 <img src="http://via.placeholder.com/400x250">
+
 
 <br>
 <br>
 
 <form action="/presentations/check" method="get">
-   <label>Received a code to join a presentation?</label>
+  <div class="information">
+    <label>Received a code to join a presentation?</label>
+  </div>
+  
    <input type="text" name="presentation_id" placeholder="code">
    <button>Join</button>
  </form>

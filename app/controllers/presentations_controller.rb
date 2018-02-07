@@ -19,13 +19,24 @@ class PresentationsController < ApplicationController
     redirect_to '/'
   end
 
-
 	def show
     @presentation = Presentation.find(params[:id])
 	end
 
   def index
     redirect_to '/teachers/show'
+  end
+
+  def vote
+  end
+
+  def check
+    presentation_id = params[:presentation_id]
+    presentation = Presentation.find(presentation_id)
+    if !presentation
+      @message = "This code is not valid. Please try again."
+    end
+    redirect_to '/presentations/' + presentation_id + '/vote'
   end
 
 end

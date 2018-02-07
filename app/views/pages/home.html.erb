@@ -1,23 +1,28 @@
-<div class="loginSignupButtons">
-<% if !logged_in? %>
-  <a href="/login"><h2>Login</h2></a>
-  <a href="/teachers/new"><h2>Signup</h2></a>
-<% end %>
 
+
+
+<div class="main">
 <% if logged_in? %>
   <!-- log out button -->
   <form action="/session" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <button>logout</button>
   </form>
-  <h2>Logged in as: <%= current_user.username %></h2>
   <p><a href="teachers/<%=current_user.id%>">Go to my dashboard</a></p>
 <% end %>
 
 <br>
 <br>
+</div>
 
+<div class="loginSignupButtons">
+<% if !logged_in? %>
+  <a href="/login"><h2>Login</h2></a>
+  <a href="/teachers/new"><h2>Signup</h2></a>
+<% end %>
+</div>
+
+<div class="main">
 <div class="information">
  <p>The Worm is a real-time audience sentiment feedback tool for the classroom and other public speaking scenarios.</p>
 </div>
@@ -38,3 +43,5 @@
  </form>
     <%= flash[:notice] %>
  <br>
+
+</div>

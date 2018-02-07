@@ -29,6 +29,8 @@ class PresentationsController < ApplicationController
 
 	def show
     @presentation = Presentation.find(params[:id])
+    @start_time = @presentation.start_time.strftime("%H:%M:%S")
+    @end_time = @presentation.end_time.strftime("%H:%M:%S")
 	end
 
   def index

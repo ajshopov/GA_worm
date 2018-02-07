@@ -5,7 +5,7 @@ class SessionController < ApplicationController
 
   def create
     teacher = Teacher.find_by(email: params[:email])
-    if teacher && teacher.authenticate(params[:password])    
+    if teacher && teacher.authenticate(params[:password])
       session[:teacher_id] = teacher.id # just a hash
       redirect_to '/'
     else
@@ -18,4 +18,3 @@ class SessionController < ApplicationController
     redirect_to '/login'
   end
 end
- 

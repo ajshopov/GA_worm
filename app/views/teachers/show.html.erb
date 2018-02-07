@@ -1,15 +1,17 @@
 <h1>Teacher Dashboard</h1>
 
-
-	<h4>logout button (placeholder)</h4>
-<!-- logout button for real-->
-
-
 <p>
   <a href="/presentations/new">create a new presentation</a>
 </p>
 
-	<h2>Previous Worms</h2>
+	<h2>Your Previous Worms</h2>
+
+	<% @presentations.each do |pres| %>
+		<a href="/presentations/<%= pres.id %>">
+		<h2><%= pres.description %></h2>
+		</a>
+		<p><%= pres.metric %></p>
+	<% end %>
 
  	<img src="http://via.placeholder.com/400x250">
  	<img src="http://via.placeholder.com/400x250">

@@ -12,6 +12,7 @@ var timeline = [];
 var myChart;
 var data;
 
+
 var option = {
   responsive: false,
   scales: {
@@ -95,7 +96,6 @@ setInterval(function(){
     // event.preventDefault();
   // })
   // })
-
 
 
 

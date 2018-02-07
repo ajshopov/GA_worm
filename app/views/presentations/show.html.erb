@@ -10,22 +10,28 @@
 <% end %>
 
 
-<h2><%= @presentation.description %></h2>
+<h2>Presentation: <%= @presentation.description %></h2>
 
 <p>
-  <%= @presentation.metric %>
+  Please rate your score about: <%= @presentation.metric %>
 </p>
 <p>
-  <%= @presentation.date %>
-  <%= @presentation.start_time %>
-  <%= @presentation.end_time %>
+  Presentation date: <%= @presentation.date %>
+</p>
+<p>
+  Start time: <%= @start_time %>
+</p>
+<p>
+  End time: <%= @end_time %>
 </p>
 
 
 <canvas id="chart_test" height="400px" width="600px"></canvas>
 
 <script>
+
   // setInterval (function(){
   //   location.reload();
   // }, 10000);
 </script>
+

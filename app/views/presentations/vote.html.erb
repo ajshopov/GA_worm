@@ -17,6 +17,7 @@
 <h4>Session Time</h4>
 <h4>Session Code</h4>
 
+<p>note: the show page doesn't display properly due to the refresh every time you vote</p>
 <canvas id="chart_test" height="400px" width="600px"></canvas>
 
 
@@ -32,7 +33,7 @@
   <input type="hidden" name="presentation_id" value="<%= @presentation.id %>">
   <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="vote_value">
   <p>Value: <span id="demo"></span></p>
-  <button>vote</button>
+  <button class="vote-button">vote</button>
 </form>
 
 <script>
@@ -45,5 +46,14 @@ output.innerHTML = slider.value; // Display the default slider value
 slider.oninput = function() {
     output.innerHTML = this.value;
 }
+
+
+// $(document).ready(function() {
+//   document.querySelector('.vote-button').addEventListener("click", function(event){
+//     console.log('voted')
+//     event.preventDefault();
+//   })
+// })
+
 
 </script>

@@ -1,10 +1,14 @@
 var options = {
   url: '/api/votes',
-  method: 'get' //default
+  method: 'get', //default
+  data: {
+    id: location.pathname.split('/')[2]
+  }
 };
 
 var allVotes;
 var chartData = [];
+
 var option = {
   responsive: false,
   scales: {
@@ -28,9 +32,7 @@ var option = {
 };
 
 
-$.ajax(options).done(function(response){
-  allVotes = response;
-
+$.ajax(options).done(function(allVotes){
   allVotes.forEach(function(vote){
     chartData.push(vote['vote_value']);
   });

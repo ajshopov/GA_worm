@@ -2,14 +2,17 @@ Rails.application.routes.draw do
 
 	root to: 'pages#home'
 
+	get '/presentations/check', to: 'presentations#check'
+
+	resources :votes
+  resources :presentations
+  resources :teachers
+
   get '/login', to: 'session#new'
 	post '/session', to: 'session#create'
   delete '/session', to: 'session#destroy'
-	get '/presentations/:id/vote', to: 'votes#vote' #routes to page to vote for specific presentation
-
-  resources :votes
-  resources :presentations
-  resources :teachers
+	get '/presentations/:id/vote', to: 'presentations#vote' #routes to page to vote for specific presentation
+	# get '/presentations/:id/show', to: 'presentations#show' #routes to page to vote for specific presentation
   get '/api/votes', to: 'votes#api_index'
 
 

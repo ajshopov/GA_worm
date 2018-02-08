@@ -1,43 +1,61 @@
-<% if logged_in? %>
-  <!-- log out button -->
-  <form action="/session" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <button>logout</button>
-  </form>
-  
-<% end %>
+
+<div class="descriptionOfShow">
+<h2><span>Presentation:</span><br> <%= @presentation.description %></h2>
+
+<h2>
+  <span>Use this code to share with your students: </span><br><%= @presentation.uuid %>
+</h2>
+
+<h2>
+  <span>Presentation date:</span><br> <%= @presentation.date %>
+</h2>
+<h2>
+  <span>Start time:</span> <br><%= @start_time %>
+</h2>
+<h2>
+  <span>End time:</span><br> <%= @end_time %>
+</h2>
+<br>
+<br>
 
 
-<h2>Presentation: <%= @presentation.description %></h2>
-
-<p>
-  Please rate your score about: <%= @presentation.metric %>
-</p>
-<p>
-  Use this code to share with your students: <%= @presentation.uuid %>
-</p>
-
-<p>
-  Presentation date: <%= @presentation.date %>
-</p>
-<p>
-  Start time: <%= @start_time %>
-</p>
-<p>
-  End time: <%= @end_time %>
-</p>
-
+<h2>See Graph Below: </h2>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="deleteButton">
 <form action="/presentations/<%=@presentation.id%>" method="post">
   <input type="hidden" name="_method" value="delete">
   <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
   <button>Delete</button>
+  </div>
 </form>
+<br>
+<br>
+
 
 <a href="/presentations/<%=@presentation.id%>/edit">Update</a>
 
 
+<h2><span>Graph showing: </span> <br><%= @presentation.metric %></h2>
+
+
+
+ 
+
+</div>
+
+<div class="chartShow">
 <canvas id="chart_test" height="400px" width="1000px"></canvas>
+</div>
+
+
+
 
 <script>
 
@@ -45,3 +63,4 @@
   //   location.reload();
   // }, 10000);
 </script>
+

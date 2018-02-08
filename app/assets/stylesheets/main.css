@@ -232,6 +232,7 @@ h2 {
 
 
 
+
 .presentationbutton a {
     font-size: 30px;
     margin: 50px 50px 40px 460px;
@@ -259,7 +260,7 @@ h2 {
 .previouswormsButtons h2 {
      font-size: 15px;
      margin: 20px;
-    color: white;
+    color: #FE7F01;
 }
 
 .previouswormsButtons a {
@@ -272,12 +273,59 @@ h2 {
 
 
 .loginPageForm {
-     margin: 80px 390px 80px 100px;
+     margin: 0px 390px 80px 100px;
+     display: inline-block;
  }
 
-.loginPageFormEmail {
+/*.loginPageFormEmail {
     margin: 100px 490px 100px 200px;
+}*/
+
+
+.newUserButton h2 {
+     margin: 20px 0px 20px 0px;
 }
+
+span {
+color: black;
+font-size: 20px;
+}
+
+.descriptionOfShow {
+    color: #FE7F01;
+    padding: 30px 200px 100px 220px;
+    text-align: center;
+
+}
+
+.deleteButton {
+    float: left;
+    display: block;
+}
+
+
+.deleteButton button {
+    padding: 10px 28px 10px 28px;
+    color: #FE7F01
+}
+
+.deleteButton button:hover, button:active {
+    background-color: #FE7F01;
+    color: white;
+    border: 1px solid white;
+    transition-duration: 0.2s;
+
+} 
+
+.chartShow {
+     padding: 0px 200px 100px 150px;
+}
+
+
+
+
+
+
 
 
 

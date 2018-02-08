@@ -18,23 +18,31 @@
 <form action="/session" method="post">
    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 <div class="loginPageFormEmail"> 
-   <label for="">email</label>
-    </div>
-   <input type="text" name="email">
 
+   <label for="">email</label>
    <br>
-   <br>
-  
+   <input type="text" name="email">
+    </div>
+
+  <br>
+  <br>
 
    <label for="">password</label>
+   <br>
    <input type="password" name="password">
   <br>
    <br>
+
+   
+
    <button>login</button>
  </form>
-</div>
+
 
  <p><%= flash[:notice] %></p>
 
-
+<div class="newUserButton">
  <a href="/teachers/new"><h2>New User?</h2></a>
+</div>
+
+ </div>

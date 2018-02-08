@@ -8,13 +8,16 @@
 	<div class="previousworms">
 	<h2>Your Previous Worms</h2>
 	</div>
+<%= @presentations %>
 
 <div class="previouswormsButtons"> 
 	<% @presentations.each do |pres| %>
 		<a href="/presentations/<%= pres.id %>">
 		<h2><%= pres.description %></h2>
 		</a>
-		<p><%= pres.metric %></p>
+		<p>Metric <%= pres.metric %></p>
+		<p>Total votes: <%= pres.votes.count %></p>
+
 	<% end %>
 	</div>
 

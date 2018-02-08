@@ -42,8 +42,11 @@
    <button>logout</button>
    </form>
    <h2>Username: <%= current_user.username %></h2>
+   <div class="dashboardbutton">
     <p><a href="/teachers/<%=current_user.id%>">Go to my dashboard</a></p>
+    </div>
   </div>
+
  <% end %>
 
 

@@ -38,14 +38,14 @@ class PresentationsController < ApplicationController
   end
 
   def vote
-    @presentation = Presentation.find(params[:id])
+    @presentation = Presentation.find_by uuid:params[:uuid]
   end
 
   def check
-    presentation_id = params[:presentation_id]
-    @presentation = Presentation.find_by id:presentation_id
+    presentation_uuid = params[:uuid]
+    @presentation = Presentation.find_by uuid:presentation_uuid
     if @presentation
-      redirect_to '/presentations/' + presentation_id + '/vote'
+      redirect_to '/presentations/' + presentation_uuid + '/vote'
     else
       redirect_to '/', notice: "This code is not valid. Please try again."
     end

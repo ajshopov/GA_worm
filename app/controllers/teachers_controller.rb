@@ -16,7 +16,6 @@ class TeachersController < ApplicationController
 	def show
 	 @teacher = Teacher.find(id=session[:teacher_id])
 	 @presentations = Presentation.where(teacher_id: @teacher.id)
-	 
 	end
 
 end

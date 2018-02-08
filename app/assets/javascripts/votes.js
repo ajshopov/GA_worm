@@ -20,7 +20,7 @@ var option = {
     display: false
   },
   animation: {
-    duration: 5000,
+    duration: 4000,
     easing: 'easeInOutQuad'
   },
   scales: {
@@ -52,26 +52,26 @@ var option = {
 
 $(document).ready(function() {
     var ctx = document.getElementById('chart_test');
-
-    data = {
-      labels: [1,2,3,4,5,6,7,8,9,10,11,12],
-      datasets: [{
-        label: "Dataset #1",
-        backgroundColor: "rgba(254,127,1,0.2)",
-        borderColor: "rgba(254,127,1,1)",
-        borderWidth: 5,
-        pointRadius: 0,
-        // hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        // hoverBorderColor: "rgba(255,99,132,1)",
-        data: timeline,
-      }]
-    };
-    myChart = new Chart(ctx, {
-      type: 'line',
-      options: option,
-      data: data
-    })
-
+    if(ctx !== null){
+      data = {
+        labels: [1,2,3,4,5,6,7,8,9,10,11,12],
+        datasets: [{
+          label: "Dataset #1",
+          backgroundColor: "rgba(254,127,1,0.2)",
+          borderColor: "rgba(254,127,1,1)",
+          borderWidth: 5,
+          pointRadius: 0,
+          // hoverBackgroundColor: "rgba(255,99,132,0.4)",
+          // hoverBorderColor: "rgba(255,99,132,1)",
+          data: timeline,
+        }]
+      };
+      myChart = new Chart(ctx, {
+        type: 'line',
+        options: option,
+        data: data
+      })
+    }
 })
 
 
@@ -102,7 +102,9 @@ setInterval(function(){
         timeline.shift();
       }
       console.log("timeline " + timeline)
-  myChart.update();
+    if(document.querySelector('canvas') !== null){ 
+      myChart.update();
+    }
   });
 
 }, 3000);

@@ -76,6 +76,13 @@ button:hover, button:active {
 
 }
 
+.loginSignupButtons a:hover, a:active{
+    background-color: white;
+    color: #FE7F01;
+    border: 1px solid white;
+    transition-duration: 0.2s;
+}
+
 .wormtitle {
     color: white;
     text-align: center;
@@ -90,6 +97,10 @@ button:hover, button:active {
     font-size: 50px;
 }
 
+.loginSignupButtons h2 {
+    color: white;
+    padding: 0px 10px 10px 10px;
+}
 
 
 a {
@@ -140,6 +151,7 @@ input {
 }
 
 p {
+    
 
 }
 
@@ -193,12 +205,13 @@ h2 {
 .previouswormsButtons p {
     font-size: 15px;
     color: #FE7F01;
-    padding: 5px 12px 5px 120px;
+    padding: 5px 12px 5px 38px;
 }
 
 .previouswormsButtons {
      margin: 50px 50px 40px 460px;
      padding: 5px 12px 5px 120px;
+
 }
 
 .previouswormsButtons h2 {

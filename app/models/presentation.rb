@@ -3,8 +3,14 @@ class Presentation < ApplicationRecord
 
   before_save :add_uuid
 
-  def average
-    puts 'test'
+  def average (presentations)
+    @presentations = presentations
+    @presentations.each do |preso|
+    @vote_array = []
+      preso.votes.each do |vote|
+        @vote_array.push(vote.vote_value)
+      end
+    end
   end
 
   private

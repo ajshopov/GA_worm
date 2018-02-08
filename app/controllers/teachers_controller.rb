@@ -20,9 +20,17 @@ class TeachersController < ApplicationController
 	def show
 	@teacher = Teacher.find(id=session[:teacher_id])
 	@presentations = @teacher.presentations
-	@presentations.each do ||
-		
-	end
+
+	# @presentations.average(@presentations)
+
+	# @presentations.each do |preso|
+	# 	@vote_array = []
+	# 	preso.votes.each do |vote|
+	# 		@vote_array.push(vote.vote_value)
+	# 	end
+	# end
+
+
 	 # @presentations = Presentation.where(teacher_id: @teacher.id)
 	end
 

@@ -3,6 +3,10 @@ class TeachersController < ApplicationController
 	def new
 	end
 
+	def index
+		redirect_to '/teachers/<%=teacher.id%>'
+	end
+
 	def create
 		teacher = Teacher.new
 		teacher.email = params[:email]
@@ -10,7 +14,7 @@ class TeachersController < ApplicationController
 		teacher.password = params[:password]
 		teacher.save
 		session[:teacher_id] = teacher.id
-		redirect_to '/'
+		redirect_to '/teachers'
 	end
 
 	def show

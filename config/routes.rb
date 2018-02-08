@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/login', to: 'session#new'
 	post '/session', to: 'session#create'
   delete '/session', to: 'session#destroy'
-	get '/presentations/:uuid/vote', to: 'presentations#vote' #routes to page to vote for specific presentation
+	get '/presentations/:id/vote', to: 'presentations#vote' #routes to page to vote for specific presentation
 	# get '/presentations/:id/show', to: 'presentations#show' #routes to page to vote for specific presentation
   get '/api/votes', to: 'votes#api_index'
 

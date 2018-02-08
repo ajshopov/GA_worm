@@ -29,6 +29,12 @@
   End time: <%= @end_time %>
 </p>
 
+<form action="/presentations/<%=@presentation.id%>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <button>Delete</button>
+</form>
+
 
 <canvas id="chart_test" height="400px" width="600px"></canvas>
 

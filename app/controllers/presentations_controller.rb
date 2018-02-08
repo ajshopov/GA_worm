@@ -51,4 +51,15 @@ class PresentationsController < ApplicationController
     end
   end
 
+  def destroy
+    presentation = Presentation.find_by(id:params[:id])
+    #destroy all votes for this preso first
+    Vote.where(presentation_id: params[:id]).destroy_all
+    if presentation.destroy
+      redirect_to '/teachers/show'
+    else
+      render :show
+    end
+  end
+
 end

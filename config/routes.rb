@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 	root to: 'pages#home'
 
 	get '/presentations/check', to: 'presentations#check'
+	#delete '/presentations/:id', to: 'presentation#destroy'
 
 	resources :votes
   resources :presentations

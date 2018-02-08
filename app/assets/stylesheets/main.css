@@ -248,13 +248,14 @@ font-size: 20px;
 }
 
 .deleteButton {
-    float: left;
-    display: block;
+    display: inline-block;
+    padding: 20px 10px 0px 10px;
 }
 
 
 .deleteButton button {
-    padding: 10px 28px 10px 28px;
+    padding: 12px 28px 9px 28px;
+    margin: 10px 0px 0px 10px;
     color: #FE7F01
 }
 
@@ -267,5 +268,10 @@ font-size: 20px;
 }
 
 .chartShow {
-     padding: 0px 200px 100px 150px;
+     padding: 0px 0px 0px 150px;
 }
+
+.dashboardbuttonShowPage {
+    padding: 0px 30px 30px 30px;
+}
+

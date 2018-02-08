@@ -38,7 +38,7 @@ class PresentationsController < ApplicationController
   end
 
   def vote
-    @presentation = Presentation.find_by uuid:params[:uuid]
+    @presentation = Presentation.find_by id:params[:id]
   end
 
   def check

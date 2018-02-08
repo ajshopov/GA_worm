@@ -24,7 +24,11 @@
 <div class="information">
     <p>The Worm is a real-time audience sentiment feedback tool for the classroom <br> and other public speaking scenarios.</p>
 </div>
-
+   <div class="dashboardbutton">
+    <% if logged_in? %>
+    <p><a href="/teachers/<%=current_user.id%>">Go to my dashboard</a></p>
+    </div>
+    <% end %>
   <img src="http://via.placeholder.com/400x250">
   <br>
   <br>

@@ -50,25 +50,29 @@ body {
 }
 
 a:link, a:visited {
-    background-color: white;
-    color: #FE7F01;
+    background-color: #FE7F01;
+    color: white;
     padding: 5px 15px;
     text-align: center; 
     text-decoration: none;
     display: inline-block;
+    border: 1px solid white;
+
 }
 
 a:hover, a:active {
-    background-color: #FE7F01;
-    color: white;
+    background-color: white;
+    color: #FE7F01;
     border: 1px solid white;
-
+    transition-duration: 0.2s;
+    border: 1px solid #FE7F01;
 }
 
 button:hover, button:active {
     background-color: #FE7F01;
     color: white;
     border: 1px solid white;
+    transition-duration: 0.2s;
 
 }
 
@@ -139,9 +143,15 @@ p {
 
 }
 
+h1 {
+    text-align: center;
+    padding: 0px 20px 20px 230px;
+    color: #FE7F01;
+}
+
 h2 {
     color: #FE7F01;
-    font-size: 20px
+    font-size: 15px
 }
 
 .LoggedInInfo {
@@ -150,13 +160,56 @@ h2 {
     text-decoration: none;
     display: inline-block;
     float: right;
-    font-size: 20px;
+    font-size: 14px;
+}
+
+.secondmain {
+      padding: 60px 20px 20px 360px;
+      text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+}
+
+.dashboardbutton a {
+    font-size: 14px;
 }
 
 
 
+.presentationbutton a {
+    font-size: 30px;
+    margin: 50px 50px 40px 460px;
+}
 
 
+.previousworms h2 {
+    font-size: 15px;
+    text-align: center;
+    /*margin: 50px 50px 40px 460px;*/
+}
+
+.previouswormsButtons p {
+    font-size: 15px;
+    color: #FE7F01;
+    padding: 5px 12px 5px 120px;
+}
+
+.previouswormsButtons {
+     margin: 50px 50px 40px 460px;
+     padding: 5px 12px 5px 120px;
+}
+
+.previouswormsButtons h2 {
+     font-size: 15px;
+     margin: 20px;
+    color: white;
+}
+
+.previouswormsButtons a {
+
+}
 
 
 

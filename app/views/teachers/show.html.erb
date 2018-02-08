@@ -1,21 +1,21 @@
 <h1>Teacher Dashboard</h1>
 
 <p>
-  <a href="/presentations/new">create a new presentation</a>
+	<div class="presentationbutton">
+  <a href="/presentations/new">Create New Presentation</a>
+  </div>
 </p>
-
+	<div class="previousworms">
 	<h2>Your Previous Worms</h2>
+	</div>
 
+<div class="previouswormsButtons"> 
 	<% @presentations.each do |pres| %>
 		<a href="/presentations/<%= pres.id %>">
 		<h2><%= pres.description %></h2>
 		</a>
 		<p><%= pres.metric %></p>
+		<img src="http://via.placeholder.com/400x250">
 	<% end %>
+	</div>
 
- 	<img src="http://via.placeholder.com/400x250">
- 	<img src="http://via.placeholder.com/400x250">
- 	<img src="http://via.placeholder.com/400x250">
- 	<img src="http://via.placeholder.com/400x250">
- 	<img src="http://via.placeholder.com/400x250">
- 	<img src="http://via.placeholder.com/400x250">

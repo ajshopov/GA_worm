@@ -1,9 +1,9 @@
 body {
- background-color: #F2F1F1;
+ background-color: ghostwhite;
 }
 
 .slidecontainer {
-    width: 100%; /* Width of the outside container */
+    width: 50%; /* Width of the outside container */
 }
 
 /* The slider itself */
@@ -44,8 +44,9 @@ body {
 
 .homebutton {
     background-color: #FE7F01;
-    padding: 5px;
+    padding: 5px 5px 10px 20px;
     color: white;
+    border: 0px solid white;
 }
 
 a:link, a:visited {
@@ -58,7 +59,17 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    background-color: #F2F1F1;
+    background-color: #FE7F01;
+    color: white;
+    border: 1px solid white;
+
+}
+
+button:hover, button:active {
+    background-color: #FE7F01;
+    color: white;
+    border: 1px solid white;
+
 }
 
 .wormtitle {
@@ -67,11 +78,14 @@ a:hover, a:active {
 }
 
 .loginSignupButtons {
-    padding: 20px 70px 80px 280px;
+    padding: 0px 20px 20px 120px;
     text-align: center; 
     text-decoration: none;
     display: inline-block;
+    float: right;
+    font-size: 50px;
 }
+
 
 
 a {
@@ -81,7 +95,7 @@ a {
     padding: 5px 12px 5px 10px;
       border: 0px solid white;
        border-radius: 5px;
-    font-size: 11px;
+    font-size: 20px;
         box-shadow: inset 0 0 5px #FE7F01;
         text-decoration: none;
 
@@ -93,7 +107,7 @@ button {
     margin: 0px 0px 0px 0px;
      border: 0px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    box-shadow: inset 0 0 10px #FE7F01;
+    box-shadow: inset 0 0 5px #FE7F01;
         background-color: white;
             padding: 5px 10px 5px 10px;
   
@@ -112,6 +126,37 @@ input {
 .information {
     color: #FE7F01;
 }
+
+
+.main {
+     padding: 20px 0px 0px 0px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+p {
+
+}
+
+h2 {
+    color: #FE7F01;
+    font-size: 20px
+}
+
+.LoggedInInfo {
+    padding: 20px 20px 20px 40px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+    font-size: 20px;
+}
+
+
+
+
+
 
 
 

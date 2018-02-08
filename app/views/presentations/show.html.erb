@@ -1,3 +1,6 @@
+<div class="dashboardbuttonShowPage">
+<p><a href="/teachers/<%=current_user.id%>">Go to my dashboard</a></p>
+</div>
 
 <div class="descriptionOfShow">
 <h2><span>Presentation:</span><br> <%= @presentation.description %></h2>
@@ -15,19 +18,18 @@
 <h2>
   <span>End time:</span><br> <%= @end_time %>
 </h2>
-<br>
-<br>
+
 
 
 <h2>See Graph Below: </h2>
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+
+<a href="/presentations/<%=@presentation.id%>/edit">Update</a>
+
 <div class="deleteButton">
 <form action="/presentations/<%=@presentation.id%>" method="post">
   <input type="hidden" name="_method" value="delete">
@@ -36,17 +38,10 @@
   </div>
 </form>
 <br>
-<br>
-
-
-<a href="/presentations/<%=@presentation.id%>/edit">Update</a>
-
 
 <h2><span>Graph showing: </span> <br><%= @presentation.metric %></h2>
 
 
-
- 
 
 </div>
 

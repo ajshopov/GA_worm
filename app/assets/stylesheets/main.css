@@ -42,50 +42,62 @@ body {
     cursor: pointer;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 .homebutton {
     background-color: #FE7F01;
     padding: 5px 5px 10px 20px;
     color: white;
-    border: 0px solid white;
+    border: 0px solid #FE7F01;
+
 }
 
+
+
 a:link, a:visited {
-    background-color: #FE7F01;
-    color: white;
+    background-color: white;
+    color: #FE7F01;
     padding: 5px 15px;
     text-align: center; 
     text-decoration: none;
     display: inline-block;
-    border: 1px solid white;
+    border: 1px solid #FE7F01;
+    box-shadow: inset 0 0 10px #FE7F01;
+   
+          
 
 }
+
+
 
 a:hover, a:active {
     background-color: white;
     color: #FE7F01;
-    border: 1px solid white;
     transition-duration: 0.2s;
-    border: 1px solid #FE7F01;
+    border: 1px solid orange;
 }
 
-button:hover, button:active {
-    background-color: #FE7F01;
-    color: white;
-    border: 1px solid white;
-    transition-duration: 0.2s;
 
-}
+
+
+
+
 
 .loginSignupButtons a:hover, a:active{
     background-color: white;
-    color: #FE7F01;
+    color: white;
     border: 1px solid white;
     transition-duration: 0.2s;
-}
-
-.wormtitle {
-    color: white;
-    text-align: center;
 }
 
 .loginSignupButtons {
@@ -98,9 +110,39 @@ button:hover, button:active {
 }
 
 .loginSignupButtons h2 {
-    color: white;
     padding: 0px 10px 10px 10px;
+    color: #FE7F01;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button:hover, button:active {
+    background-color: #FE7F01;
+    color: white;
+    border: 1px solid white;
+    transition-duration: 0.2s;
+
+}
+
+
+
+.wormtitle {
+    color: white;
+    text-align: center;
+}
+
+
 
 
 a {
@@ -130,9 +172,9 @@ button {
 
 input {
     color: #FE7F01;
-     border: 1px solid white;
+     border: 1px solid #FE7F01;
     border-radius: 5px;
-    box-shadow: inset 0 0 5px #FE7F01;
+    box-shadow: inset 0 0 7px #FE7F01;
         background-color: white;
         padding: 5px 10px 5px 10px;
 
@@ -190,6 +232,7 @@ h2 {
 
 
 
+
 .presentationbutton a {
     font-size: 30px;
     margin: 50px 50px 40px 460px;
@@ -217,12 +260,76 @@ h2 {
 .previouswormsButtons h2 {
      font-size: 15px;
      margin: 20px;
-    color: white;
+    color: #FE7F01;
 }
 
 .previouswormsButtons a {
 
 }
+
+.loginPage h1 {
+     margin: 50px 500px 40px 0px;
+ }
+
+
+.loginPageForm {
+     margin: 0px 390px 80px 100px;
+     display: inline-block;
+ }
+
+/*.loginPageFormEmail {
+    margin: 100px 490px 100px 200px;
+}*/
+
+
+.newUserButton h2 {
+     margin: 20px 0px 20px 0px;
+}
+
+span {
+color: black;
+font-size: 20px;
+}
+
+.descriptionOfShow {
+    color: #FE7F01;
+    padding: 30px 200px 100px 220px;
+    text-align: center;
+
+}
+
+.deleteButton {
+    float: left;
+    display: block;
+}
+
+
+.deleteButton button {
+    padding: 10px 28px 10px 28px;
+    color: #FE7F01
+}
+
+.deleteButton button:hover, button:active {
+    background-color: #FE7F01;
+    color: white;
+    border: 1px solid white;
+    transition-duration: 0.2s;
+
+} 
+
+.chartShow {
+     padding: 0px 200px 100px 150px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

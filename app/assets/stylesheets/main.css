@@ -129,18 +129,35 @@ input {
 
 
 .main {
-     padding: 0px 0px 0px 290px;
+     padding: 20px 0px 0px 0px;
     text-align: center; 
     text-decoration: none;
     display: inline-block;
 }
 
 p {
-    text-transform: bold;
+
 }
 
 h2 {
     color: #FE7F01;
     font-size: 20px
 }
+
+.LoggedInInfo {
+    padding: 20px 20px 20px 40px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
 

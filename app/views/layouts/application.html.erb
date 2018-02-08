@@ -34,7 +34,7 @@
 </div>
 </div>
 </div>
-
+<div class="LoggedInInfo">
 <% if logged_in? %>
   <form action="/session" method="post">
   <input type="hidden" name="_method" value="delete">
@@ -42,6 +42,8 @@
    <button>logout</button>
    </form>
    <h2>Username: <%= current_user.username %></h2>
+    <p><a href="/teachers/<%=current_user.id%>">Go to my dashboard</a></p>
+  </div>
  <% end %>
 
 

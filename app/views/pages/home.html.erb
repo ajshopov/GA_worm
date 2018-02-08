@@ -1,50 +1,46 @@
-
-
-
 <div class="main">
-<% if logged_in? %>
+  <% if logged_in? %>
   <!-- log out button -->
-  <form action="/session" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  </form>
-
-  <h2>Logged in as: <%= current_user.username %></h2>
-  <p><a href="/teachers/<%=current_user.id%>">Go to my dashboard</a></p>
-
-<% end %>
-
-<br>
-<br>
+    <form action="/session" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    </form>
+  <% end %>
+      <br>
+      <br>
 </div>
+
 
 <div class="loginSignupButtons">
-<% if !logged_in? %>
-  <a href="/login"><h2>Login</h2></a>
-  <a href="/teachers/new"><h2>Signup</h2></a>
-<% end %>
+  <% if !logged_in? %>
+    <a href="/login"><h2>Login</h2></a>
+    <a href="/teachers/new"><h2>Signup</h2></a>
+  <% end %>
 </div>
+
 
 <div class="main">
+
 <div class="information">
- <p>The Worm is a real-time audience sentiment feedback tool for the classroom and other public speaking scenarios.</p>
+    <p>The Worm is a real-time audience sentiment feedback tool for the classroom <br> and other public speaking scenarios.</p>
 </div>
 
-<img src="http://via.placeholder.com/400x250">
-
-
-<br>
-<br>
+  <img src="http://via.placeholder.com/400x250">
+  <br>
+  <br>
 
 <form action="/presentations/check" method="get">
-  <div class="information">
-    <label>Received a code to join a presentation?</label>
-  </div>
+    
+    <div class="information">
+      <label>Received a code to join a presentation?</label>
 
-   <input type="text" name="uuid" placeholder="code">
-   <button>Join</button>
- </form>
+</div>
+
+
+  <input type="text" name="uuid" placeholder="code">
+  <button>Join</button>
+  </form>
     <%= flash[:notice] %>
- <br>
+  <br>
 
 </div>

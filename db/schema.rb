@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180208002427) do
+ActiveRecord::Schema.define(version: 20180208003211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,5 +34,13 @@ ActiveRecord::Schema.define(version: 20180208002427) do
     t.text "password_digest"
   end
 
+  create_table "votes", force: :cascade do |t|
+    t.integer "vote_value"
+    t.text "ip_region"
+    t.bigint "presentation_id"
+    t.index ["presentation_id"], name: "index_votes_on_presentation_id"
+  end
+
   add_foreign_key "presentations", "teachers"
+  add_foreign_key "votes", "presentations"
 end

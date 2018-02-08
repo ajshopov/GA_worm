@@ -54,7 +54,7 @@ $(document).ready(function() {
     var ctx = document.getElementById('chart_test');
     if(ctx !== null){
       data = {
-        labels: [1,2,3,4,5,6,7,8,9,10,11,12],
+        labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],
         datasets: [{
           label: "Dataset #1",
           backgroundColor: "rgba(254,127,1,0.2)",
@@ -98,7 +98,7 @@ setInterval(function(){
       console.log("meanVote" + meanVote)
       timeline.push(meanVote);
 
-      if (timeline.length >= 13) {
+      if (timeline.length >= 22) {
         timeline.shift();
       }
       console.log("timeline " + timeline)

@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180208000458) do
+ActiveRecord::Schema.define(version: 20180208002427) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "pgcrypto"
 
+  create_table "presentations", force: :cascade do |t|
+    t.text "description"
+    t.text "metric"
+    t.datetime "date"
+    t.text "region"
+    t.bigint "teacher_id"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.uuid "uuid"
+    t.index ["teacher_id"], name: "index_presentations_on_teacher_id"
+  end
+
+  create_table "teachers", force: :cascade do |t|
+    t.text "email"
+    t.text "username"
+    t.text "password_digest"
+  end
+
+  add_foreign_key "presentations", "teachers"
 end

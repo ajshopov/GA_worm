@@ -10,15 +10,21 @@
 <% end %>
 
 
+<div class="loginPage">
 <h1> Login Page </h1>
+ </div>
 
+<div class="loginPageForm">
 <form action="/session" method="post">
    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-
+<div class="loginPageFormEmail"> 
    <label for="">email</label>
+    </div>
    <input type="text" name="email">
+
    <br>
    <br>
+  
 
    <label for="">password</label>
    <input type="password" name="password">
@@ -26,7 +32,9 @@
    <br>
    <button>login</button>
  </form>
+</div>
 
  <p><%= flash[:notice] %></p>
+
 
  <a href="/teachers/new"><h2>New User?</h2></a>

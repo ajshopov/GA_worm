@@ -6,7 +6,7 @@
     <button>logout</button>
   </form>
   <h2>Logged in as: <%= current_user.username %></h2>
-  <p><a href="teachers/<%=current_user.id%>">Go to my dashboard</a></p>
+  <p><a href="/teachers/<%=current_user.id%>">Go to my dashboard</a></p>
 <% end %>
 
 
@@ -18,23 +18,21 @@
 <h4>Session Code</h4>
 
 <p>note: the show page doesn't display properly due to the refresh every time you vote</p>
-<canvas id="chart_test" height="400px" width="600px"></canvas>
+<!-- <canvas id="chart_test" height="400px" width="600px"></canvas> -->
 
 
  <h4>SILDER BUTTON</h4>
 
  <div class="slidecontainer">
+  <form action="/votes" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
+    <input type="hidden" name="presentation_id" value="<%= @presentation.id %>">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="vote_value">
+    <p>Value: <span id="demo"></span></p>
+    <button class="vote-button">vote</button>
+  </form>
 </div>
-
-<form action="/votes" method="post" enctype="multipart/form-data">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-
-  <input type="hidden" name="presentation_id" value="<%= @presentation.id %>">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="vote_value">
-  <p>Value: <span id="demo"></span></p>
-  <button class="vote-button">vote</button>
-</form>
 
 <script>
 

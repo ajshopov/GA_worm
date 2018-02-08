@@ -18,8 +18,12 @@ class TeachersController < ApplicationController
 	end
 
 	def show
-	 @teacher = Teacher.find(id=session[:teacher_id])
-	 @presentations = Presentation.where(teacher_id: @teacher.id)
+	@teacher = Teacher.find(id=session[:teacher_id])
+	@presentations = @teacher.presentations
+	@presentations.each do ||
+		
+	end
+	 # @presentations = Presentation.where(teacher_id: @teacher.id)
 	end
 
 end

@@ -1,3 +1,5 @@
+
+
 <% if logged_in? %>
   <!-- log out button -->
   <form action="/session" method="post">
@@ -8,27 +10,43 @@
   <h2>Logged in as: <%= current_user.username %></h2>
   <p><a href="/teachers/<%=current_user.id%>">Go to my dashboard</a></p>
 <% end %>
+<br>
 
-
+<div class="newWorm">
 <h2>Start a new worm</h2>
+<br>
+<br>
 
 <form action="/presentations" method="post" enctype="multipart/form-data">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
   <label for="">Description</label>
   <input type="text" name="description">
+  
 
   <label for="">What sentiment do you want to track?</label>
   <input type="text" name="metric">
-
+   <br>
+  <br>
+<br>
+<br>
   <label for="">Date for presentation</label>
+   
   <input type="date" name="date">
+   
 
   <label for="">start time</label>
+   
   <input type="time" name="start_time">
+  
 
   <label for="">end time</label>
+   
   <input type="time" name="end_time">
-
+   
+<br>
+<br>
   <button>create</button>
 </form>
+
+</div>

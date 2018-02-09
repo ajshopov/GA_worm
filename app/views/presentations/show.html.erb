@@ -10,7 +10,7 @@
 </h2>
 
 <h2>
-  <span>Presentation date:</span><br> <%= @presentation.date %>
+  <span>Presentation date:</span><br> <%= @presentation.date.strftime('%d-%m-%Y') %>
 </h2>
 <h2>
   <span>Start time:</span> <br><%= @start_time %>
@@ -59,4 +59,3 @@
   //   location.reload();
   // }, 10000);
 </script>
-

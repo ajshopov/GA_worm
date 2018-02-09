@@ -25,10 +25,10 @@ Ruby, Rails, JavaScript, Chart.js, PostgreSQL, Heroku and a whole lot of Git.
 *Future enhancements*
 
 * uniquely identify voters on the server side for reporting purposes
-* prevent users from voting more than x times in y time period (to be determined by presenter)
-* prevent users voting from a region different from where the presentation is being held (option
-  available to be used or not by presenter)
+* limit voting frequency per user (to be determined by presenter)
+* prevent users voting from a region different from where the presentation is being held (option available to be used or not by presenter)
 * show historical graphs and more detailed statistics on dashboard page
+* improvements to voting algorithm to smooth chart
 
 *Lessons learned*
 

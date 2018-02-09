@@ -79,7 +79,6 @@ a:hover, a:active {
 }
 
 .loginSignupButtons {
-  padding: 0px 20px 20px 120px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -162,10 +161,9 @@ h2 {
     color: #FE7F01;
     font-size: 15px
 }
-
 .LoggedInInfo {
     padding: 20px 20px 20px 40px;
-    text-align: center;
+    text-align: right;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
@@ -287,11 +285,3 @@ font-size: 20px;
     font-size: 30px;
 
 }
-
-
-
-
-
-
-
-

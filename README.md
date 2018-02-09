@@ -12,7 +12,7 @@ the presenter can send their audience a special code to join and vote.
 People with a code can enter it on the homepage, to access their voting page. They can vote as many times they want during a session.
 The presenter can then track the sentiment of their audience by viewing a live feed.
 
-![Screenshot Home Page](https://github.com/ajshopov/worm/blob/master/app/assets/images/Screenshot.png)
+![Screenshot Home Page](https://github.com/ajshopov/worm/blob/master/app/assets/images/Screen Shot 2018-02-09 at 2.03.10 pm.png)
 
 *About the Team*
 

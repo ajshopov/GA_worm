@@ -22,9 +22,11 @@ class PresentationsController < ApplicationController
     p1.end_time = params[:end_time]
     end_time_with_correct_date = p1.end_time.change(year: year, month: month, day: day)
     p1.end_time = end_time_with_correct_date
-    p1.save
-
+    if p1.save
+      redirect_to '/presentations/' + p1.id.to_s
+    else
     redirect_to '/teachers/show'
+    end
   end
 
 	def show

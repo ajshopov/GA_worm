@@ -90,10 +90,9 @@ a:hover, a:active {
   text-decoration: none;
   display: inline-block;
   font-size: 50px;
-
   position: absolute;
   top: 5px;
-  right: 5px;;
+  right: 20px;
 }
 
 .loginSignupButtons h2 {
@@ -152,7 +151,7 @@ input {
 }
 
 .main {
-    padding: 20px 0px 0px 0px;
+    padding: 0px 0px 0px 700px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -223,18 +222,26 @@ h2 {
 }
 
 .loginPage h1 {
-     margin: 50px 500px 40px 0px;
+     margin: 50px 500px 40px 280px;
  }
 
 
 .loginPageForm {
-     margin: 0px 390px 80px 100px;
+     margin: 0px 530px 80px 0px;
      display: inline-block;
  }
 
-/*.loginPageFormEmail {
-    margin: 100px 490px 100px 200px;
-}*/
+.loginPageFormEmail label {
+    margin: 0px 130px 0px 180px;
+}
+
+.loginPageFormPassword label {
+    margin: 0px 100px 0px 200px;
+}
+
+.loginPageFormEmail input {
+    margin: 0px 5px 0px 100px;
+}
 
 
 .newUserButton h2 {

@@ -5,7 +5,7 @@
 </div>
 
 <h4><span>Presentation</span> <br> <%= @presentation.description %></h2>
-<h2><span>Date </span><br> <%= @presentation.date %></h2>
+<h2><span>Date </span><br> <%= @presentation.date.strftime('%d-%m-%Y') %></h2>
 <h2><span>Session Code </span><br><%= @presentation.uuid %></h2>
 </div>
 
@@ -20,8 +20,11 @@
     <input type="hidden" name="presentation_id" value="<%= @presentation.id %>">
     <input type="hidden" name="uuid" value="<%= @presentation.uuid %>">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="vote_value">
+     <div class="voteButton">
     <p>Value: <span id="demo"></span></p>
-    <button class="vote-button">vote</button>
+   
+    <button class="vote-button">Vote</button>
+  </div>
   </form>
 </div>
 

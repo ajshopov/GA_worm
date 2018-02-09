@@ -50,7 +50,7 @@ img{
     width: 45px;
     height: 45px;
     border-radius: 80%;
-    background: orange;
+    background: #FE7F01;
     cursor: pointer;
 }
 
@@ -58,7 +58,7 @@ img{
     width: 25px;
     height: 25px;
     border-radius: 80%;
-    background: orange;
+    background: #FE7F01;
     cursor: pointer;
 }
 
@@ -84,7 +84,7 @@ a:hover, a:active {
     background-color: white;
     color: #FE7F01;
     transition-duration: 0.2s;
-    border: 1px solid orange;
+    border: 1px solid #FE7F01;
 }
 
 .loginSignupButtons a:hover, a:active{
@@ -314,3 +314,20 @@ footer {
     margin-top: 80px;
     text-align: center;
 }
+
+.voteButton button {
+    padding: 30px 200px 40px 200px;
+    margin: 30px 0px 0px 85px;
+    color: black;
+    font-size: 30px;
+}
+
+.voteButton p {
+    padding: 30px 100px 0px 100px;
+    margin: 30px 40px 0px 185px;
+}
+
+
+
+
+

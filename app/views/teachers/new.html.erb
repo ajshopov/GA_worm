@@ -9,8 +9,11 @@
   <p><a href="teachers/<%=current_user.id%>">Go to my dashboard</a></p>
 <% end %>
 
+<div class="loginPage">
 <h1> Sign Up </h1>
+</div>
 
+<div class="loginPageForm">
 <form action="/teachers" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
@@ -23,8 +26,12 @@
 		<br>
 
 		<input name="password" type="password" placeholder="password">
+    <br>
+    <br>
 
 		<button>Sign up</button>
 </form>
 
 <a href="/login"><h2>Already have an account?</h2></a>
+
+</div>

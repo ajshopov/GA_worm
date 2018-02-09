@@ -9,8 +9,10 @@
   <p><a href="/teachers/<%=current_user.id%>">Go to my dashboard</a></p>
 <% end %>
 
-
+<div class="newWorm">
 <h2>Update your presentation</h2>
+<br>
+<br>
 
 <form action="/presentations/<%= @p1.id %>" method="post" enctype="multipart/form-data">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -21,6 +23,10 @@
 
   <label for="">What sentiment do you want to track?</label>
   <input type="text" name="metric" value="<%= @p1.metric %>">
+  <br>
+  <br>
+<br>
+<br>
 
   <label for="">Date for presentation</label>
   <input type="date" name="date" value="<%= @p1.date.strftime('%Y-%m-%d') %>">
@@ -30,6 +36,9 @@
 
   <label for="">end time</label>
   <input type="time" name="end_time" value="<%= @p1.end_time.strftime("%H:%m") %>">
-
+   
+<br>
+<br>
   <button>create</button>
 </form>
+</div>

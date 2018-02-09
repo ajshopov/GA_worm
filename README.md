@@ -1,8 +1,8 @@
-#The Worm
+# The Worm
 
 :bug:
 
-_*About the Worm*_
+*About the Worm*
 
 The [Worm](http://theworm.herokuapp.com/) is a real-time audience sentiment feedback tool for the classroom and other public speaking scenarios.
 It can be set up in a matter of seconds and track any sentiment the presenter can think of.

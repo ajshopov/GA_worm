@@ -51,7 +51,6 @@ img{
     padding: 5px 5px 10px 20px;
     color: white;
     border: 0px solid #FE7F01;
-
 }
 
 a:link, a:visited {
@@ -80,12 +79,15 @@ a:hover, a:active {
 }
 
 .loginSignupButtons {
-    padding: 0px 20px 20px 120px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    float: right;
-    font-size: 50px;
+  padding: 0px 20px 20px 120px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+
+  position: absolute;
+  top: 5px;
+  right: 5px;;
 }
 
 .loginSignupButtons h2 {
@@ -166,7 +168,6 @@ h2 {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    float: right;
     font-size: 14px;
 }
 

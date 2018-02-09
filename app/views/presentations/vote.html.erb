@@ -1,28 +1,17 @@
-<% if logged_in? %>
-  <!-- log out button -->
-  <form action="/session" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <button>logout</button>
-  </form>
-  
-<% end %>
+<div class="descriptionOfShow">
 
-
+<div class="VotesTitle">
 <h1>Votes Page</h1>
+</div>
 
-<h4>Presentation</h4>
-<h2><%= @presentation.description %></h2>
-<h4>Date</h4>
-<h2><%= @presentation.date %></h2>
-<h4>Session Code</h4>
-<h2><%= @presentation.uuid %></h2>
+<h4><span>Presentation</span> <br> <%= @presentation.description %></h2>
+<h2><span>Date </span><br> <%= @presentation.date %></h2>
+<h2><span>Session Code </span><br><%= @presentation.uuid %></h2>
+</div>
 
-<!-- <canvas id="chart_test" height="400px" width="600px"></canvas> -->
-<br>
-<br>
-
- <h4>SILDER BUTTON</h4>
+<div class="silderTitle">
+ <h2>VOTING SLIDER BELOW</h2>
+</div>
 
  <div class="slidecontainer">
   <form action="/votes" method="post" enctype="multipart/form-data">

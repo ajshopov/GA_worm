@@ -83,7 +83,7 @@ setInterval(function(){
     last30sVotesRuby = [];
     allVotes. forEach(function(vote){
       last30sVotesRuby.push(vote['vote_value']);
-      console.log('last30sVotesRuby' + last30sVotesRuby);
+      // console.log('last30sVotesRuby' + last30sVotesRuby);
     });
       // wrap reduce in if statement for handling no new votes
       if(last30sVotesRuby.length == 0){
@@ -95,13 +95,13 @@ setInterval(function(){
         meanVote = sum/last30sVotesRuby.length
       }
 
-      console.log("meanVote" + meanVote)
+      // console.log("meanVote" + meanVote)
       timeline.push(meanVote);
 
       if (timeline.length >= 22) {
         timeline.shift();
       }
-      console.log("timeline " + timeline)
+      // console.log("timeline " + timeline)
     if(document.querySelector('canvas') !== null){ 
       myChart.update();
     }

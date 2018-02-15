@@ -3,63 +3,48 @@
   <head>
     <title>The Worm</title>
     <%= csrf_meta_tags %>
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"> -->
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <%= stylesheet_link_tag    'application', media: 'all' %>
       <script
-  src="http://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
-    <%= javascript_include_tag 'application' %>
+      src="http://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+      <%= javascript_include_tag 'application' %>
   </head>
-
-
-
 
   <body>
     <div class="homebutton">
-<a href="/">Home</a> 
-<div class="wormtitle">
-<div class="wormlogo">
-  <img src="http://iconicagencylondon.com/wp-content/uploads/2017/07/worm-white-with-outline.png" width="150" height="75">
-</div>
-</div>
-</div>
-<div class="LoggedInInfo">
-<% if logged_in? %>
-  <form action="/session" method="post">
-  <input type="hidden" name="_method" value="delete">
-   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-   <button>logout</button>
-   </form>
-   <h2>Username: <%= current_user.username %></h2>
-
-  </div>
-
- <% end %>
-
-
+      <a href="/">Home</a> 
+      <div class="wormtitle">
+        <div class="wormlogo">
+          <img src="http://iconicagencylondon.com/wp-content/uploads/2017/07/worm-white-with-outline.png" width="150" height="75">
+        </div>
+      </div>
+    </div>
+    <div class="LoggedInInfo">
+      <% if logged_in? %>
+        <form action="/session" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <button>logout</button>
+        </form>
+        <h2>Username: <%= current_user.username %></h2>
+      <% end %>
+    </div>
 
     <%= yield %>
   </body>
 
-
 </html>
-
-
-
-
-
 
 
 

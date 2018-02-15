@@ -7,16 +7,18 @@ img{
 }
 
 .VotesTitle h1 {
-    padding: 0px 20px 20px 25px;
+    /*padding: 0px 20px 20px 25px;*/
 }
 
-.silderTitle h2 {
- padding: 0px 0px 60px 570px;
+.silderTitle {
+  text-align: center;
+ /*padding: 0px 0px 60px 570px;*/
 }
 
 .slidecontainer {
+    margin: 0 auto;
     width: 50%; /* Width of the outside container */
-    margin: 0px 100px 100px 350px;
+    /*margin: 0px 100px 100px 350px;*/
 }
 
 @media (max-width: 600px) {
@@ -157,6 +159,8 @@ input {
 
 .information {
     color: #FE7F01;
+    text-align: center;
+    clear: right;
 }
 
 .main {
@@ -168,7 +172,7 @@ input {
 
 h1 {
     text-align: center;
-    padding: 0px 20px 20px 230px;
+    /*padding: 0px 20px 20px 230px;*/
     color: #FE7F01;
 }
 
@@ -180,16 +184,16 @@ h2 {
     padding: 20px 20px 20px 40px;
     text-align: right;
     text-decoration: none;
-    display: inline-block;
+    /*display: inline-block;*/
     font-size: 14px;
     float: right;
 }
 
 .secondmain {
-    padding: 0% 30% 5% 30%;
+    /*padding: 0% 30% 5% 30%;*/
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    /*text-decoration: none;*/
+    /*display: inline-block;*/
     font-size: 14px;
     margin: 0 auto;
 }
@@ -232,30 +236,33 @@ h2 {
 }
 
 .loginPage h1 {
-     margin: 50px 550px 40px 280px;
+     /*margin: 50px 550px 40px 280px;*/
  }
 
 
 .loginPageForm {
-     margin: 0px 530px 80px 0px;
-     display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+     /*margin: 0px 530px 80px 0px;*/
+     /*display: inline-block;*/
  }
 
 .loginPageFormEmail label {
-    margin: 0px 130px 0px 180px;
+    /*margin: 0px 130px 0px 180px;*/
 }
 
 .loginPageFormPassword label {
-    margin: 0px 100px 0px 200px;
+    /*margin: 0px 100px 0px 200px;*/
 }
 
 .loginPageFormEmail input {
-    margin: 0px 5px 0px 100px;
+    /*margin: 0px 5px 0px 100px;*/
 }
 
 
-.newUserButton h2 {
-     margin: 20px 0px 20px 0px;
+.newUserButton {
+    text-align: center;
+    margin: 20px 0px 20px 0px;
 }
 
 span {
@@ -265,7 +272,7 @@ font-size: 20px;
 
 .descriptionOfShow {
     color: #FE7F01;
-    padding: 30px 200px 100px 220px;
+    padding: 30px 200px 20px 220px;
     text-align: center;
 
 }
@@ -315,16 +322,20 @@ footer {
     text-align: center;
 }
 
+.voteButton {
+  text-align: center;
+}
+
 .voteButton button {
     padding: 30px 200px 40px 200px;
-    margin: 30px 0px 0px 85px;
+    /*margin: 30px 0px 0px 85px;*/
     color: black;
     font-size: 30px;
 }
 
 .voteButton p {
     padding: 30px 100px 0px 100px;
-    margin: 30px 40px 0px 185px;
+    /*margin: 30px 40px 0px 185px;*/
 }
 
 

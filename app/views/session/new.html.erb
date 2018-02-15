@@ -9,41 +9,28 @@
   <p><a href="teachers/<%=current_user.id%>">Go to my dashboard</a></p>
 <% end %>
 
-
 <div class="loginPage">
-<h1> Login  </h1>
- </div>
+  <h1>Login Page</h1>
+</div>
 
 <div class="loginPageForm">
-<form action="/session" method="post">
-   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-<div class="loginPageFormEmail"> 
+  <form action="/session" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-   <label for="">email</label>
-   <br>
-   <input type="text" name="email">
-    </div>
-
-  <br>
-  <br>
-
-<div class="loginPageFormPassword"> 
-   <label for="">password</label>
-   <br>
-   <input type="password" name="password">
-  <br>
-   <br>
+<!-- <div class="loginPageFormEmail">  -->
+  <label for="">email</label>
+  <input type="text" name="email">
+<!-- </div> -->
+<!-- <div class="loginPageFormPassword">  -->
+  <label for="">password</label>
+  <input type="password" name="password">
+<!-- </div> -->
+  <button>login</button>
+</form>
 </div>
-   
 
-   <button>login</button>
- </form>
-
-
- <p><%= flash[:notice] %></p>
+<p><%= flash[:notice] %></p>
 
 <div class="newUserButton">
- <a href="/teachers/new"><h2>New User?</h2></a>
+  <a href="/teachers/new"><h2>New User?</h2></a>
 </div>
-
- </div>

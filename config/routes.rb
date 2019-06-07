@@ -8,6 +8,11 @@ Rails.application.routes.draw do
 	resources :votes
   resources :presentations
   resources :teachers
+  # session could be a resource
+  # active record can set uuid as default find()
+  # namespace: api do
+  #   resource: votes
+  # end
 
   get '/login', to: 'session#new'
 	post '/session', to: 'session#create'

@@ -30,6 +30,8 @@ class TeachersController < ApplicationController
 	# 	end
 	# end
 
+	# ^^ group() average()
+
 
 	 # @presentations = Presentation.where(teacher_id: @teacher.id)
 	end
